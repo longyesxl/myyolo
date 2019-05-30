@@ -258,7 +258,7 @@ class dark_net(torch.nn.Module):
         o11=self.od11(y11)
         o12=self.od12(o11)
         out1=self.o1(o12)
-        yolo1o,loss1=self.yolo1(out1)
+        yolo1o,loss1=self.yolo1(out1,targets)
 
         oo21=self.oo2(o11)
         ups2=self.up2(oo21)
@@ -267,7 +267,7 @@ class dark_net(torch.nn.Module):
         odo22=self.od22(odo21)
         odo23=self.od23(odo22)
         out2=self.o2(odo23)
-        yolo2o,loss2=self.yolo2(out2)
+        yolo2o,loss2=self.yolo2(out2,targets)
 
         oo31=self.oo3(odo22)
         ups3=self.up3(oo31)
@@ -276,7 +276,7 @@ class dark_net(torch.nn.Module):
         odo32=self.od32(odo31)
         odo33=self.od33(odo32)
         out3=self.o3(odo33)
-        yolo3o,loss3=self.yolo3(out3)
+        yolo3o,loss3=self.yolo3(out3,targets)
         return [yolo1o,yolo2o,yolo3o],loss1+loss2+loss3
 
 
