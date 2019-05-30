@@ -14,8 +14,8 @@ cd images
 #wget -c https://pjreddie.com/media/files/val2014.zip
 
 # Unzip
-unzip -q train2014.zip
-unzip -q val2014.zip
+#unzip -q train2014.zip
+#unzip -q val2014.zip
 
 cd ..
 
