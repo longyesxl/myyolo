@@ -277,7 +277,7 @@ class dark_net(torch.nn.Module):
         odo33=self.od33(odo32)
         out3=self.o3(odo33)
         yolo3o,loss3=self.yolo3(out3,targets)
-        return [yolo1o,yolo2o,yolo3o],loss1+loss2+loss3
+        return loss1+loss2+loss3,[yolo1o,yolo2o,yolo3o]
 
 
 
