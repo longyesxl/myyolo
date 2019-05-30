@@ -18,6 +18,7 @@ cd images
 #unzip -q val2014.zip
 cp ../../../../input/train2014.zip train2014.zip
 cp ../../../../input/val2014.zip val2014.zip
+ls ../../../../
 cd ..
 
 # Download COCO Metadata
