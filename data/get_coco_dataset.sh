@@ -16,8 +16,8 @@ cd images
 # Unzip
 #unzip -q train2014.zip
 #unzip -q val2014.zip
-
-cd ..
+cp ../../../../input/train2014.zip train2014.zip
+cd ../../../../input/val2014.zip val2014.zip
 
 # Download COCO Metadata
 wget -c https://pjreddie.com/media/files/instances_train-val2014.zip
