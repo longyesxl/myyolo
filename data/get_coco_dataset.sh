@@ -16,8 +16,8 @@ cd images
 # Unzip
 #unzip -q train2014.zip
 #unzip -q val2014.zip
-cp ../../../../input/train2014/train2014 train2014
-cp ../../../../input/train2014/train2014 train2014
+cp -r ../../../../input/train2014/train2014 train2014
+cp -r ../../../../input/train2014/train2014 train2014
 ls ../../../../
 cd ..
 
