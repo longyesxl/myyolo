@@ -242,7 +242,7 @@ class dark_net(torch.nn.Module):
         self.o3=convolu1(256,3*(5+class_nub))
         self.yolo3=YOLOLayer([(10,13),  (16,30),  (33,23)],80)
 
-    def forward(self,x,targets):
+    def forward(self,x,targets=None):
         y1=self.convs1(x)
         y2=self.convd1(y1)
         y3=self.dark_link1(y2)
